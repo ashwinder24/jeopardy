@@ -1,0 +1,4 @@
+<%= simple_form_for @quiz do |f| %>
+  <%= f.association :answers, label_method: :option, as: :radio_buttons %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,16 @@
+<% provide(:title, 'New Answer for Question') %>
+<h1>Add Answers</h1>
+<p>
+  Add answers to your quiz question below. Each question has four options for the user to select, one of which is the correct answer.
+</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p><%= @question.body %></p>
+    <%= simple_form_for(:answer, url: new_quiz_question_answer_path) do |f| %>
+      <%= f.input :option %>
+      <%= f.collection_radio_buttons :correct_answer, [[true, 'Yes'] ,[false, 'No']], :first, :last %> 
+      <%= f.submit 'Create answer', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

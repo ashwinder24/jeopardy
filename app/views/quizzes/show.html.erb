@@ -1,0 +1,17 @@
+<header class="jumbotron">
+  <h1>Joepardy!</h1>
+</header>
+<%= link_to 'Quizzes Home', quizzes_path, data: {confirm: 'Returning home will erase you progress on this quiz. Are you sure?'} %>
+<fieldset>
+  <legend>
+    <%= @quiz.name %>
+  </legend>
+  <% @questions.each do |question| %>
+    <div>
+      <strong>
+        <%= question.body %>
+      </strong>
+    </div>
+    <%= render :partial => 'answers/guess' %>
+  <% end %>
+</fieldset>

@@ -1,0 +1,11 @@
+
+<%= form_for quiz_questions_path do |f| %>
+
+  <div class="form-field">
+    <%= f.label :body, "Question" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Next Step" %>
+
+<% end %>

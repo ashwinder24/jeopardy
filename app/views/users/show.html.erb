@@ -1,0 +1,35 @@
+<% provide(:title, @user.username) %>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<%= render 'shared/header' %>
+<body>
+    <div class='container'>
+      <section class="user_info">
+        <table>
+          <tr>
+            <th><%= 'User Name' %></th>
+            <th><%= 'User Score' %></th>
+          </tr>
+          <tr>
+            <td>
+              <%= gravatar_for @user %>
+              <%= @user.username %>
+            </td>
+          </tr>
+          <tr>
+            <td class='score'>
+              <% if @user.score != nil %>
+              <%= @user.score %>
+              <% else %>
+              <%= 'No score yet!' %>
+            </td>
+          </tr>
+              <% end %>
+            <% end %>
+        </table>
+      </section>
+    </div>
+</body>
+</html>

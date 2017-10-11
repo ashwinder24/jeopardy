@@ -1,0 +1,6 @@
+<h1 class="jumbotron">Joepardy!</h1>
+<%= link_to 'Back', quizzes_path, class: 'btn btn-primary', data: {confirm: 'This will delete current quiz. Are you sure?'} %>
+<fieldset>
+  <legend>Create A Quiz</legend>
+  <%= render 'form' %>
+</fieldset>

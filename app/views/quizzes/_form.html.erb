@@ -1,0 +1,5 @@
+<%= simple_form_for @quiz do |q| %>
+  <%= q.input :name, label: "Quiz Name" %>
+  <%= q.input :theme, hint: "Movies, Sports, Music, etc." %>
+  <%= q.button :submit, 'Next Step' %>
+<% end %>

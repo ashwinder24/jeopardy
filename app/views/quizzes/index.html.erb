@@ -1,0 +1,19 @@
+<header class="jumbotron">
+  <h1>Joepardy</h1>
+</header>
+<%= link_to 'Back', root_path %>
+<hr/>
+<fieldset>
+  <legend>Quiz Collection</legend>
+  <% @quizzes.each do |quiz| %>
+    <div class="questions">
+      <strong>
+        <%= quiz.name %>
+      </strong>
+      <br/>
+      <%= "Theme: #{quiz.theme}" %>
+      <br/>
+      <%= link_to 'Take Quiz', quiz_path(quiz), data: {confirm: "Start #{quiz.name}?"} %>
+    </div>
+  <% end %>
+</fieldset>
